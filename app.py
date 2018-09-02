@@ -14,13 +14,7 @@ def show_content(query):
 	r = requests.get('http://pokeapi.co/api/v2/pokemon-form/'+ query)
 	pokemonName = print(r.json()['name'])
 	pokemonId = print(r.json()['id'])
-	return render_template('test.html')
-
-#@app.route('/pokemon/<string:query>', methods=['GET'])
-#def show_content2(query):
-#	s = requests.get('http://pokeapi.co/api/v2/pokemon-form/ + query')
-#	print(s.json())
-#	return render_template('test.html')
+	return render_template('test.html', pokemonName=r.json()['name'], pokemonId=r.json()['id'])
 
 if __name__ == '__show_content__':
     app.run() 
