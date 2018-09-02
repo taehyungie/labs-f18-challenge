@@ -9,7 +9,10 @@ def main():
 
 # @app.route('/pokemon/<query>', methods=['GET'])
 # def show_content(query):
-# 	return 
+# 	return render_template('test.html')
+
+if __name__ == '__main__':
+	app.run() 
 
 if __name__ == '__main__':
     app.run()
